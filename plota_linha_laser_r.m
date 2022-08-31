@@ -1,0 +1,13 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function plota_linha_laser_r(coords)
+
+plot(coords(1,:),coords(2,:),'--gs',...
+    'LineStyle','none','Marker','o',...
+    'MarkerSize',0.2,...
+    'MarkerEdgeColor','g',...
+    'MarkerFaceColor',[0.5,0.5,0.5]) 
+hold on;
+return
