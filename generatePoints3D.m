@@ -21,7 +21,7 @@ else
 end    
 
 % Chama a função que detecta as linhas epipolares a partir das coordenadas
-linhas_eps = gera_linhas_epipolares(centerLineL, mat_F, imgSize);
+linhas_eps = gera_linhas_epipolares(centerLineL, mat_F, imgSize, imgR);
 
 % Chama função discretiza para discretizar as linhas epipolares
 [linhas_eps_discr] = DiscretizeAllLines(linhas_eps, imgSize);

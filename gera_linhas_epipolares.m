@@ -2,12 +2,14 @@
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function epiPts = gera_linhas_epipolares(L_1, matriz_F, imgSize)
+function epiPts = gera_linhas_epipolares(L_1, matriz_F, imgSize, imgR)
 
 %fprintf('Gerando linhas epipolares...\n');
 
 N = size(L_1,2);
 
+imshow(imgR);
+hold on;
 for m = 1:N
     aux = [L_1(1,m); L_1(2,m); 1];
     pt_trans = matriz_F*aux;
@@ -16,6 +18,7 @@ for m = 1:N
         epiPts(:,m) = [NaN NaN]; % função isnan(var) testa se var é NaN.
     else
         epiPts(:,m) = [coord(2,1) coord(2,2)];
+        plot(coord(:,1),coord(:,2),'r');
     end
 end
 
